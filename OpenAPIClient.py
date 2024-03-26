@@ -1,6 +1,6 @@
 import os, json, glob
 promt_path = ""
-inputfolder_path = ""
+inputfolder_path = "/PythonOpenAIBot/English/"
 outputfoler_path = ""
 
 # get input file from folder
@@ -13,3 +13,6 @@ for filename in glob.glob(os.path.join(inputfolder_path, '*.json')):#two path jo
     
 with open('') as f:
   promt_data = json.load(f)
+
+  with open("tmp.json","w") as outfile:#output translated json with indent
+    json.dump(data,outfile,indent=4)
